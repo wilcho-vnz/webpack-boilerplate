@@ -1,0 +1,50 @@
+{
+  "name": "webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate repository for begin to build a basic website from scratch with the latest technologies like Webpack, Babel and Sass.",
+  "main": "",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js --mode development",
+    "build:prod": "webpack --config webpack.prod.js --mode production",
+    "dev": "webpack-dev-server --config webpack.dev.js --mode development",
+    "start": "webpack-dev-server --config webpack.dev.js --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilcho-vnz/webpack-boilerplate.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "jquery",
+    "sass",
+    "webpack"
+  ],
+  "author": "Wilhelm Siso",
+  "license": "MIT",
+  "homepage": "https://github.com/wilcho-vnz/webpack-boilerplate.git",
+  "devDependencies": {
+    "autoprefixer": "^8.6.5",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "dotenv": "^6.0.0",
+    "file-loader": "^1.1.11",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.2",
+    "postcss-loader": "^2.1.6",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.16.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-md5-hash": "0.0.6"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.2",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  }
+}

@@ -1,0 +1,15 @@
+// Sass variables
+@import 'variables';
+
+// Import Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Typographies
+@import "partials/typography";
+
+/**
+ * @author: Wilhelm Siso
+ */
+
+// Partials files
+@import "partials/base.scss"; // default

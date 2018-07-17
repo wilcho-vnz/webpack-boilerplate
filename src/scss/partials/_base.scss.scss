@@ -1,0 +1,29 @@
+body {
+    background-color: $white;
+    background: url('~assets/img/bg-test.png') no-repeat ;
+    background-size: 30%;
+    background-position: 50% 50%;
+    color: #9bc1bc;
+    height: 100vh;
+    text-align: center;
+
+    @include media-breakpoint-up(sm){
+        background-size: 15%;
+    }
+
+    h1 {
+        padding-top: 45%;
+
+        @include media-breakpoint-up(md) {
+            padding-top: 50%;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 20%;
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding-top: 15%;
+        }
+    }
+}
