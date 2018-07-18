@@ -1,10 +1,17 @@
 # Webpack Boilerplate
 
-Boilerplate to compile and build files using Webpack 4, is integrated with Babel Bootstrap 4 and Sass.
+Hi there!  👋
+
+This repository is intented to be a boilerplate for a quick start for my web development, I don't know how many repositories must be exist out the, but apart of be just another one is also a record of my learning in my dayly job and readings about web technologies.
+
+This boilerplate is made for compile and build files using Webpack configured with Babel Bootstrap 4 and Sass.
 
 This Boilerplate is inspired in this [post](https://hackernoon.com/a-tale-of-webpack-4-and-how-to-finally-configure-it-in-the-right-way-4e94c8e7e5c1) of [Margarita Obraztsova](https://hackernoon.com/@riittagirl)
+Thanks Margarita!
 
-## What include?
+If you like it send me a tweet!
+
+## What include this configuration?
 - [Webpack 4](https://webpack.js.org/)
 - [Sass](http://sass-lang.com/)
 - [Babel](https://babeljs.io/)
@@ -46,8 +53,6 @@ $ yarn run build:prod
 - [A tale of Webpack 4 and how to finally configure it in the right way](https://hackernoon.com/a-tale-of-webpack-4-and-how-to-finally-configure-it-in-the-right-way-4e94c8e7e5c1)
 - [Babel](https://babeljs.io/)
 - [Syntactically Awesome Style Sheets (Sass)](http://sass-lang.com)
-
-README template thanks to [dillinger.io](https://dillinger.io)
 
 License
 ----
