@@ -11,6 +11,9 @@ module.exports = merge(common, {
         path: path.resolve(__dirname, process.env.ASSETS_OUTPUT_FOLDER),
         filename: 'js/bundle.[chunkhash].js' // to take the name of the index.js change for [name].[chunkhash].js
     },
+    optimization: {
+        minimize: process.env.NODE_ENV === 'production' ? true : false
+    },
     plugins: [
         new CleanWebpackPlugin('dist/assets', {} ),
         // Load ExtractTextPlugin to be used on the rules and output app css

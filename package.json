@@ -4,10 +4,10 @@
   "description": "Boilerplate repository for begin to build a basic website from scratch with the latest technologies like Webpack, Babel and Sass.",
   "main": "",
   "scripts": {
-    "build": "webpack --config webpack.prod.js --mode development",
-    "build:prod": "webpack --config webpack.prod.js --mode production",
-    "dev": "webpack-dev-server --config webpack.dev.js --mode development",
-    "start": "webpack-dev-server --config webpack.dev.js --mode production"
+    "build": "webpack --config webpack.prod.js",
+    "build:prod": "webpack --config webpack.prod.js",
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "start": "webpack-dev-server --config webpack.dev.js"
   },
   "repository": {
     "type": "git",
