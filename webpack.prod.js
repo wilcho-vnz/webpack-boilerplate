@@ -1,12 +1,13 @@
+// plugins
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const common = require('./webpack.common.js');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const merge = require('webpack-merge');
-const path = require('path');
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const WebpackMd5Hash = require('webpack-md5-hash'); // hash css files
 
-
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const common = require('./webpack.common.js');
+const merge = require('webpack-merge');
+const path = require('path');
 
 module.exports = merge(common, {
     // output app js
@@ -18,6 +19,11 @@ module.exports = merge(common, {
     optimization: {
         minimize: process.env.NODE_ENV === 'production' ? true : false,
         minimizer: [
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
+                sourceMap: true // set to true if you want JS source maps
+            }),
             new OptimizeCSSAssetsPlugin({})
         ]
     },
