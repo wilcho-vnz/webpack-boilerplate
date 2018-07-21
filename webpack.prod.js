@@ -5,15 +5,23 @@ const merge = require('webpack-merge');
 const path = require('path');
 const WebpackMd5Hash = require('webpack-md5-hash'); // hash css files
 
+
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+
 module.exports = merge(common, {
     // output app js
     output: {
         path: path.resolve(__dirname, process.env.ASSETS_OUTPUT_FOLDER),
         filename: 'js/bundle.[chunkhash].js' // to take the name of the index.js change for [name].[chunkhash].js
     },
+
     optimization: {
-        minimize: process.env.NODE_ENV === 'production' ? true : false
+        minimize: process.env.NODE_ENV === 'production' ? true : false,
+        minimizer: [
+            new OptimizeCSSAssetsPlugin({})
+        ]
     },
+    
     plugins: [
         new CleanWebpackPlugin('dist/assets', {} ),
         // Load ExtractTextPlugin to be used on the rules and output app css
