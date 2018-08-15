@@ -51,14 +51,26 @@ module.exports = {
             }]
         },
         { 
-            test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)(\?\S*)?$/,
+            test: /\.(png|jpg|gif|svg)(\?\S*)?$/,
             use: [{
-                loader: 'url-loader',
+                loader: 'file-loader',
                 options: {
-                    limit: 1000, // if less than 10 kb, add base64 encoded image to css if not reference to file in  assets/img/
+                    limit: 10, // if less than 10 kb, add base64 encoded image to css if not reference to file in  assets/img/
                     name: '[name].[ext]', // if more than 10 kb move to this folder in build using file-loader
-                    outputPath: 'img/', // destiny folder for the files that exceed the limit param, the roor folder will be the specified on the output
-                    publicPath: '../img/' // url that will be replace the path for the files that exceed the limit param
+                    outputPath: './img/', // relative path replaced in css references
+                    publicPath: '../img/' // create a folder img in assets folder for files that exceed the limit param
+                }
+            }]
+        },
+        { 
+            test: /\.(eot|ttf|woff|woff2)(\?\S*)?$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    limit: 10, // if less than 10 kb, add base64 encoded image to css if not reference to file in  assets/img/
+                    name: '[name].[ext]', // if more than 10 kb move to this folder in build using file-loader
+                    outputPath: './fonts/', // relative path replaced in css references
+                    publicPath: '../fonts/' // create a folder fonts in assets folder for files that exceed the limit param
                 }
             }]
         }]
