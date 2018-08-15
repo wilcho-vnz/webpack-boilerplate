@@ -1,4 +1,5 @@
 dist/assets/
+src/assets/*
 .env
 node_modules/
 npm-debug.log*
