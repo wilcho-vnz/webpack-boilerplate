@@ -2,7 +2,7 @@
 
 Hi there!  👋
 
-This repository is intented to be a boilerplate for a quick start for my web development, I don't know how many repositories must be exist out the, but apart of be just another one is also a record of my learning in my dayly job and readings about web technologies.
+This repository is intended to be a boilerplate for a quick start for my web development, I don't know how many repositories must be exist out the, but apart of be just another one is also a record of my learning in my daily job and readings about web technologies.
 
 This boilerplate is made for compile and build files using Webpack configured with Babel Bootstrap 4 and Sass.
 
@@ -16,37 +16,54 @@ If you like it send me a tweet!
 - [Sass](http://sass-lang.com/)
 - [Babel](https://babeljs.io/)
 - [Bootstrap 4](http://getbootstrap.com/)
+- [Fontawesome 5](https://fontawesome.com/)
 
 ## Installation
 
 Clone repository
 
 ```sh
-$ git clone https://wilcho@bitbucket.org/wilcho/webpack-boilerplate.git
+$ git clone https://github.com/wilcho-vnz/webpack-boilerplate.git
 $ cd webpack-boilerplate
 $ yarn install
 ```
 
 ## Commands
 
-Run Webpack dev server
+Start dev server
 ```sh
-$ yarn run dev
+$ yarn start
 ```
 
-Run Webpack production server
+Build files
 ```sh
-$ yarn run start
+$ yarn build
 ```
 
-Run Webpack build
+Build for production
 ```sh
-$ yarn run build
+$ yarn build:prod
+```
+## How to
+
+### Handle background images
+The files used as background images should be stored in src/assets/img/ and in your sass files call it, for example:
+```
+background-image: url("~assets/img/bg-test.png");
 ```
 
-Run Webpack production build
-```sh
-$ yarn run build:prod
+### Handle fonts
+The fonts files should be stored in src/assets/fonts/ and have to be added in _typography.scss file, for example:
+```
+@font-face  {
+	font-family:  'font-name';
+	src:  url('~assets/fonts/font-name/font-name.eot');
+	src:
+		url('~assets/fonts/font-name/font-name.eot') format('embedded-opentype'),
+		url('~assets/fonts/font-name/font-name.woff2')  format('woff2'),
+		url('~assets/fonts/font-name/font-name.woff')  format('woff'),
+		url('~assets/fonts/font-name/font-name.ttf')  format('truetype'),
+		url('~assets/fonts/font-name/font-name.svg#font-name')  format('svg');
 ```
 
 ## References
@@ -58,3 +75,4 @@ License
 ----
 
 MIT
+
