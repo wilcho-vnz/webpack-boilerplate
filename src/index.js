@@ -1,8 +1,11 @@
+// Styles import
+// Load main style file
+import "./scss/main.scss";
+
+// imports JS
+
 // import bootstrap js
-import 'bootstrap/dist/js/bootstrap';
+import "bootstrap/dist/js/bootstrap";
 
-// Load main style files
-import './scss/main.scss';
-
-// Load js libraries and app files
-import './js/test.js';
+// Testing JS file
+import "./js/test.js";

@@ -1,0 +1,26 @@
+.hello-world {
+  height: 300px;
+  left: 50%;
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+
+  .description,
+  .title {
+    text-align: center;
+  }
+
+  .description {
+    span {
+      display: block;
+      margin-top: 1rem;
+    }
+
+    .far {
+      color: $secondary;
+      font-size: 3rem;
+    }
+  }
+}
