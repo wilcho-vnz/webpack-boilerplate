@@ -95,11 +95,5 @@ module.exports = {
   },
   node: {
     fs: "empty" // allow require js files
-  },
-  resolve: {
-    alias: {
-      // allow use bg img in sass files, example: background: url('')
-      assets: path.resolve(__dirname, "src/assets")
-    }
   }
 };
