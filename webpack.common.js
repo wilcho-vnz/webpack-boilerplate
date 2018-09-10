@@ -92,8 +92,5 @@ module.exports = {
         ]
       }
     ]
-  },
-  node: {
-    fs: "empty" // allow require js files
   }
 };
