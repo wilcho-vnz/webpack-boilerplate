@@ -1,12 +1,8 @@
 dist/assets/
-src/assets/*
 .env
 node_modules/
 npm-debug.log*
 yarn-error.log
-
-__MACOSX
-.DS_Store
 
 # OS generated files #
 ######################
@@ -16,6 +12,7 @@ __MACOSX
 ._*
 .Spotlight-V100
 .Trashes
+__MACOSX
 Icon?
 ehthumbs.db
 Thumbs.db
