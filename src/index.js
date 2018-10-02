@@ -1,11 +1,13 @@
+/* eslint import/no-unassigned-import: "off" */
+
 // Styles import
 // Load main style file
-import "./scss/main.scss";
+import './scss/main.scss';
 
-// imports JS
+// Imports JS
 
-// import bootstrap js
-import "bootstrap/dist/js/bootstrap";
+// Import bootstrap js
+import 'bootstrap/dist/js/bootstrap';
 
 // Testing JS file
-import "./js/test.js";
+import './js/test';
