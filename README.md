@@ -49,6 +49,18 @@ Build for production
 $ yarn build:prod
 ```
 
+Run linter
+
+```sh
+$ yarn lint
+```
+
+Run prettier
+
+```sh
+$ yarn prettier
+```
+
 ## How to
 
 ### Handle background images
