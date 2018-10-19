@@ -2,6 +2,7 @@
 require('dotenv').config();
 
 const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -23,6 +24,10 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+        test: /\.pug$/,
+        use: ['html-loader', 'pug-html-loader']
       },
       {
         test: /\.scss$/,
@@ -101,5 +106,11 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: './src/pug/index.pug',
+      filename: './../index.html'
+    })
+  ]
 };
