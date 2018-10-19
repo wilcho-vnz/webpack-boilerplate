@@ -3,6 +3,7 @@ require('dotenv').config();
 
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -112,8 +113,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
+      excludeAssets: [/style.css/, /bundle.js/], // Exclude style and bundle links for generated html files
       template: './src/pug/index.pug',
       filename: './../index.html'
-    })
+    }),
+    new HtmlWebpackExcludeAssetsPlugin()
   ]
 };
