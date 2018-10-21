@@ -13,11 +13,12 @@ If you like it send me a tweet!
 
 ## What include this configuration?
 
-- [Webpack 4](https://webpack.js.org/)
-- [Sass](http://sass-lang.com/)
 - [Babel](https://babeljs.io/)
 - [Bootstrap 4](http://getbootstrap.com/)
 - [Fontawesome 5](https://fontawesome.com/)
+- [Pug](https://pugjs.org/api/getting-started.html)
+- [Sass](http://sass-lang.com/)
+- [Webpack 4](https://webpack.js.org/)
 
 ## Installation
 
@@ -47,18 +48,6 @@ Build for production
 
 ```sh
 $ yarn build:prod
-```
-
-Run linter
-
-```sh
-$ yarn lint
-```
-
-Run prettier
-
-```sh
-$ yarn prettier
 ```
 
 ## How to
