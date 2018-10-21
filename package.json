@@ -1,6 +1,6 @@
 {
   "name": "webpack-boilerplate",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Boilerplate repository for begin to build a basic website from scratch with the latest technologies like Webpack, Babel and Sass.",
   "main": "",
   "scripts": {
