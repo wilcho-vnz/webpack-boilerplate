@@ -52,6 +52,10 @@ $ yarn build:prod
 
 ## How to
 
+### Handle pug files
+
+html files from pug files are generated when the command build is used
+
 ### Handle background images
 
 The files used as background images should be stored in src/assets/img/ and in your sass files call it, for example:
