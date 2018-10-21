@@ -52,7 +52,7 @@ $ yarn build:prod
 
 ## How to
 
-### Handle pug files
+### Generating html from pug files
 
 html files from pug files are generated when the command build is used
 
