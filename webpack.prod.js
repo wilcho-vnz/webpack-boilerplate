@@ -1,6 +1,7 @@
 // Plugins
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -36,6 +37,12 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({
       filename: 'css/style.[contenthash].css'
     }),
-    new WebpackMd5Hash()
+    new WebpackMd5Hash(),
+    new CopyWebpackPlugin([
+      {
+        from: 'src/assets/img/static',
+        to: 'img' // The dist/assets folder is already configured in the output folder in webpack.common.js
+      }
+    ])
   ]
 });
