@@ -162,9 +162,6 @@ url('~../ssets/fonts/font-name/font-name.svg#font-name') format('svg');
 ```
 
 ### ESLint configuration
-I'm  
-
-## References
 VS Code recommended User Settings JSON configuration
 ```
 {
@@ -188,7 +185,7 @@ VS Code recommended User Settings JSON configuration
 }
 ```
 
-  
+## References
 
 -  [A tale of Webpack 4 and how to finally configure it in the right way](https://hackernoon.com/a-tale-of-webpack-4-and-how-to-finally-configure-it-in-the-right-way-4e94c8e7e5c1)
 
