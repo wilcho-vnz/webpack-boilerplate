@@ -32,6 +32,7 @@
     "copy-webpack-plugin": "^4.5.4",
     "css-loader": "^1.0.0",
     "dotenv": "^6.0.0",
+    "eslint": "^5.9.0",
     "file-loader": "^2.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-exclude-assets-plugin": "^0.0.7",
