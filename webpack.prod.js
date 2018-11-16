@@ -15,7 +15,7 @@ module.exports = merge(common, {
   output: {
     path: path.resolve(__dirname, process.env.ASSETS_OUTPUT_FOLDER),
     // To take the name of the index.js change for [name].[chunkhash].js
-    filename: 'js/bundle.[chunkhash].js'
+    filename: 'js/bundle.[chunkhash].js',
   },
 
   optimization: {
@@ -25,27 +25,28 @@ module.exports = merge(common, {
         cache: true,
         parallel: true,
         // Set to true if you want JS source maps
-        sourceMap: true
+        sourceMap: true,
       }),
-      new OptimizeCSSAssetsPlugin({})
-    ]
+      new OptimizeCSSAssetsPlugin({}),
+    ],
   },
 
   plugins: [
     new CleanWebpackPlugin('dist/assets', {}),
     // Load ExtractTextPlugin to be used on the rules and output app css
     new MiniCssExtractPlugin({
-      filename: 'css/style.[contenthash].css'
+      filename: 'css/style.[contenthash].css',
     }),
     new WebpackMd5Hash(),
     new CopyWebpackPlugin([
       {
         from: 'src/assets/img/static',
-        to: 'img' // The dist/assets folder is already configured in the output folder in webpack.common.js
+        to: 'img', // The dist/assets folder is already configured in the output folder in webpack.common.js
       },
       {
-        from: 'src/html/'
-      }
-    ])
-  ]
+        from: 'src/html/',
+        to: './dist/',
+      },
+    ]),
+  ],
 });
