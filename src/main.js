@@ -1,5 +1,3 @@
-/* eslint import/no-unassigned-import: "off" */
-
 // Styles import
 // Load main style file
 import './scss/main.scss';

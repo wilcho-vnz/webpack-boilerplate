@@ -8,13 +8,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
-    main: './src/index.js'
+    main: './index.js',
   },
   // Output app js
   output: {
     path: path.resolve(__dirname, process.env.ASSETS_OUTPUT_FOLDER),
     // To take the name of the index.js change for [name].[chunkhash].js
-    filename: 'js/bundle.[chunkhash].js'
+    filename: 'js/bundle.[chunkhash].js',
   },
   module: {
     rules: [
@@ -25,63 +25,63 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           emitWarning: true,
-          configFile: './.eslintrc.json'
-        }
+          configFile: './.eslintrc.json',
+        },
       },
       {
         // Babel
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
-        }
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.pug$/,
         use: [
           'html-loader',
-          { loader: 'pug-html-loader', options: { pretty: true } }
-        ]
+          { loader: 'pug-html-loader', options: { pretty: true } },
+        ],
       },
       {
         test: /\.scss$/,
         use: [
           {
-            loader: 'style-loader'
+            loader: 'style-loader',
           },
           {
-            loader: MiniCssExtractPlugin.loader
+            loader: MiniCssExtractPlugin.loader,
           },
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true
-            }
+              sourceMap: true,
+            },
           },
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true
-            }
-          }
-        ]
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
         use: [
           {
-            loader: 'style-loader'
+            loader: 'style-loader',
           },
           {
-            loader: MiniCssExtractPlugin.loader
+            loader: MiniCssExtractPlugin.loader,
           },
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true
-            }
-          }
-        ]
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(png|jpg|gif)(\?\S*)?$/,
@@ -96,10 +96,10 @@ module.exports = {
               // Relative path replaced in css references
               outputPath: './img/',
               // Create a folder img in assets folder for files that exceed the limit param
-              publicPath: '../img/'
-            }
-          }
-        ]
+              publicPath: '../img/',
+            },
+          },
+        ],
       },
       {
         test: /\.(eot|ttf|woff|woff2|svg)(\?\S*)?$/,
@@ -114,19 +114,19 @@ module.exports = {
               // Relative path replaced in css references
               outputPath: './fonts/',
               // Create a folder fonts in assets folder for files that exceed the limit param
-              publicPath: '../fonts/'
-            }
-          }
-        ]
-      }
-    ]
+              publicPath: '../fonts/',
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new HtmlWebPackPlugin({
       excludeAssets: [/style.css/, /bundle.js/], // Exclude style and bundle links for generated html files
       template: './src/pug/index.pug',
-      filename: './../index.html'
+      filename: './../index.html',
     }),
-    new HtmlWebpackExcludeAssetsPlugin()
-  ]
+    new HtmlWebpackExcludeAssetsPlugin(),
+  ],
 };
