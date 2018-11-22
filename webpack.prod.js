@@ -43,6 +43,10 @@ module.exports = merge(common, {
         from: 'src/assets/img/static',
         to: 'img', // The dist/assets folder is already configured in the output folder in webpack.common.js
       },
+      {
+        from: 'src/html/',
+        to: './dist/',
+      },
     ]),
   ],
 });
