@@ -11,7 +11,9 @@ module.exports = merge(common, {
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
-    host: '0.0.0.0',
+    host: 'localhost',
+    // Open browser
+    open: true,
     port: process.env.NODE_PORT,
     // This allow to make public the assets folder
     publicPath: '/assets/',
