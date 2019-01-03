@@ -40,8 +40,9 @@ module.exports = merge(common, {
     new WebpackMd5Hash(),
     new CopyWebpackPlugin([
       {
-        from: 'src/assets/img/static',
+        from: 'src/assets/img',
         to: path.resolve(__dirname, 'dist/assets/img/'),
+        ignore: ['.gitignore'],
       },
     ]),
   ],
