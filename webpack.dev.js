@@ -2,6 +2,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const common = require('./webpack.common.js');
 
@@ -30,5 +31,12 @@ module.exports = merge(common, {
     }),
     // Load Hot Module plugin to refresh the browser with any file change
     new webpack.HotModuleReplacementPlugin(),
+    new CopyWebpackPlugin([
+      {
+        from: 'src/assets/img',
+        to: path.resolve(__dirname, 'dist/assets/img/'),
+        ignore: ['.gitignore'],
+      },
+    ]),
   ],
 });

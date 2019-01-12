@@ -124,7 +124,7 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       excludeAssets: [/style.css/, /bundle.js/], // Exclude style and bundle links for generated html files
-      template: './src/pug/index.pug',
+      template: './src/html/index.html',
       filename: './../index.html',
     }),
     new HtmlWebpackExcludeAssetsPlugin(),
