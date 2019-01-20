@@ -1,3 +1,4 @@
+
 # Webpack Boilerplate
 
 Hi there! 👋
@@ -18,6 +19,7 @@ If you like it send me a tweet!
 -  [Bootstrap 4](http://getbootstrap.com/)
 -  [Fontawesome 5](https://fontawesome.com/)
 -  [Pug](https://pugjs.org/api/getting-started.html)
+-  [React](https://reactjs.org/)
 -  [Sass](http://sass-lang.com/)
 -  [Webpack 4](https://webpack.js.org/)
 
