@@ -31,7 +31,7 @@ $ git clone https://github.com/wilcho-vnz/webpack-boilerplate.git
 $ cd webpack-boilerplate
 $ cp env.example .env
 $ yarn install
-$ yarn build && yarn start
+$ yarn build && yarn dev
 ```
 
 NOTE: run the last command only the first time that you start the devserver. This is because the assets and default index should be copied to the dist folder where webpack dev server will look for contents.
@@ -39,7 +39,7 @@ NOTE: run the last command only the first time that you start the devserver. Thi
 ## Commands
 ### Start dev server
 ```sh
-$ yarn start
+$ yarn dev
 ```
 
 ### Build files
