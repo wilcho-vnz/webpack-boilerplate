@@ -1,6 +1,6 @@
 {
   "name": "@wilcho/webpack-boilerplate",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Boilerplate repository for begin to build a basic website from scratch with the latest technologies like Webpack, Babel and Sass.",
   "main": "",
   "scripts": {
