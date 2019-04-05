@@ -1,4 +1,3 @@
-
 # Webpack Boilerplate
 
 Hi there! 👋
@@ -15,54 +14,66 @@ If you like it send me a tweet!
 
 ## What include this configuration?
 
--  [Babel](https://babeljs.io/)
--  [Bootstrap 4](http://getbootstrap.com/)
--  [Fontawesome 5](https://fontawesome.com/)
--  [Pug](https://pugjs.org/api/getting-started.html)
--  [React](https://reactjs.org/)
--  [Sass](http://sass-lang.com/)
--  [Webpack 4](https://webpack.js.org/)
+- [Babel](https://babeljs.io/)
+- [Bootstrap 4](http://getbootstrap.com/)
+- [Fontawesome 5](https://fontawesome.com/)
+- [Pug](https://pugjs.org/api/getting-started.html)
+- [React](https://reactjs.org/)
+- [Sass](http://sass-lang.com/)
+- [Webpack 4](https://webpack.js.org/)
 
 ## Installation
 
 Clone repository
+
 ```sh
 $ git clone https://github.com/wilcho-vnz/webpack-boilerplate.git
 $ cd webpack-boilerplate
 $ cp env.example .env
 $ yarn install
-$ yarn build && yarn dev
+$ yarn build && yarn start
 ```
 
 NOTE: run the last command only the first time that you start the devserver. This is because the assets and default index should be copied to the dist folder where webpack dev server will look for contents.
-  
+
 ## Commands
+
 ### Start dev server
+
 ```sh
-$ yarn dev
+$ yarn start
 ```
 
 ### Build files
+
 ```sh
 $ yarn build
 ```
 
 ### Build for production
+
 ```sh
 $ yarn build:prod
 ```
 
 ## How to
+
 ### Generating html from pug files
+
 html files from pug files are generated when the command build is used
 
 ### Handle background images
+
 The files used as background images should be stored in src/assets/img/ and in your sass files call it, for example:
+
 ```
 background-image: url("../assets/img/bg-test.png");
 ```
+
 ### Handle fonts
+
 The fonts files should be stored in src/assets/fonts/ and have to be added in \_typography.scss file, for example:
+
 ```
 @font-face {
     font-family: 'font-name';
@@ -75,7 +86,9 @@ The fonts files should be stored in src/assets/fonts/ and have to be added in \_
 ```
 
 ## ESLint configuration
+
 VS Code recommended User Settings JSON configuration
+
 ```
 {
     ...
@@ -91,10 +104,17 @@ VS Code recommended User Settings JSON configuration
 }
 
 ```
-## References
--  [A tale of Webpack 4 and how to finally configure it in the right way](https://hackernoon.com/a-tale-of-webpack-4-and-how-to-finally-configure-it-in-the-right-way-4e94c8e7e5c1)
--  [Babel](https://babeljs.io/)
--  [Syntactically Awesome Style Sheets (Sass)](http://sass-lang.com)
 
-## License
+## References
+
+- [A tale of Webpack 4 and how to finally configure it in the right way](https://hackernoon.com/a-tale-of-webpack-4-and-how-to-finally-configure-it-in-the-right-way-4e94c8e7e5c1)
+- [Babel](https://babeljs.io/)
+- [Syntactically Awesome Style Sheets (Sass)](http://sass-lang.com)
+
+## Author
+
+- Wilhelm Siso [@wilcho\_](https://twitter.com/wilcho)
+
+---
+
 MIT
