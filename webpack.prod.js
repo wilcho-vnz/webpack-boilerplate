@@ -13,7 +13,7 @@ const common = require('./webpack.common.js');
 module.exports = merge(common, {
   // Output app js
   output: {
-    path: path.resolve(__dirname, process.env.ASSETS_OUTPUT_FOLDER),
+    path: path.resolve(__dirname, process.env.ASSETS_FOLDER),
     // To take the name of the index.js change for [name].[chunkhash].js
     filename: 'js/bundle.[chunkhash].js',
   },
@@ -32,7 +32,7 @@ module.exports = merge(common, {
   },
 
   plugins: [
-    new CleanWebpackPlugin('dist/assets', {}),
+    new CleanWebpackPlugin(process.env.ASSETS_FOLDER, {}),
     // Load ExtractTextPlugin to be used on the rules and output app css
     new MiniCssExtractPlugin({
       filename: 'css/style.[contenthash].css',
@@ -41,7 +41,7 @@ module.exports = merge(common, {
     new CopyWebpackPlugin([
       {
         from: 'src/assets/img',
-        to: path.resolve(__dirname, 'dist/assets/img/'),
+        to: path.resolve(__dirname, `${process.env.ASSETS_FOLDER}/img/`),
         ignore: ['.gitignore'],
       },
     ]),

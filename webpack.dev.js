@@ -2,13 +2,12 @@
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   devServer: {
-    contentBase: './dist',
+    contentBase: process.env.WEBPACK_CONTENT_BASE,
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
@@ -17,11 +16,11 @@ module.exports = merge(common, {
     open: true,
     port: process.env.NODE_PORT,
     // This allow to make public the assets folder
-    publicPath: '/assets/',
+    publicPath: path.resolve(__dirname, process.env.WEBPACK_CONTENT_BASE),
   },
   // Output app js
   output: {
-    path: path.resolve(__dirname, process.env.ASSETS_OUTPUT_FOLDER),
+    path: path.resolve(__dirname, process.env.ASSETS_FOLDER),
     filename: 'js/bundle.js',
   },
   plugins: [
@@ -31,12 +30,5 @@ module.exports = merge(common, {
     }),
     // Load Hot Module plugin to refresh the browser with any file change
     new webpack.HotModuleReplacementPlugin(),
-    new CopyWebpackPlugin([
-      {
-        from: 'src/assets/img',
-        to: path.resolve(__dirname, 'dist/assets/img/'),
-        ignore: ['.gitignore'],
-      },
-    ]),
   ],
 });

@@ -12,7 +12,7 @@ module.exports = {
   },
   // Output app js
   output: {
-    path: path.resolve(__dirname, process.env.ASSETS_OUTPUT_FOLDER),
+    path: path.resolve(__dirname, process.env.ASSETS_FOLDER),
     // To take the name of the index.js change for [name].[chunkhash].js
     filename: 'js/bundle.[chunkhash].js',
   },
@@ -125,7 +125,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       excludeAssets: [/style.css/, /bundle.js/], // Exclude style and bundle links for generated html files
       template: './src/html/index.html',
-      filename: './../index.html',
+      filename: `${process.env.ASSETS_FOLDER}/index.html`,
     }),
     new HtmlWebpackExcludeAssetsPlugin(),
   ],
