@@ -1,6 +1,6 @@
 {
   "name": "@wilcho/webpack-boilerplate",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Boilerplate repository for begin to build a basic website from scratch with the latest technologies like Webpack, Babel and Sass.",
   "main": "",
   "scripts": {
@@ -24,8 +24,8 @@
   "license": "MIT",
   "homepage": "https://github.com/wilcho-vnz/webpack-boilerplate.git",
   "devDependencies": {
-    "@babel/core": "^7.4.0",
-    "@babel/preset-env": "^7.2.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^9.5.0",
     "babel-loader": "^8.0.5",
