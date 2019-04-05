@@ -5,10 +5,24 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: {
     main: './index.js',
+  },
+  optimization: {
+    minimize: process.env.NODE_ENV === 'production',
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        // Set to true if you want JS source maps
+        sourceMap: true,
+      }),
+      new OptimizeCSSAssetsPlugin({}),
+    ],
   },
   // Output app js
   output: {
