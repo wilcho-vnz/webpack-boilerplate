@@ -7,7 +7,7 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   devServer: {
-    contentBase: process.env.WEBPACK_CONTENT_BASE,
+    contentBase: `${process.env.WEBPACK_CONTENT_BASE}`,
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
@@ -16,11 +16,14 @@ module.exports = merge(common, {
     open: true,
     port: process.env.NODE_PORT,
     // This allow to make public the assets folder
-    publicPath: path.resolve(__dirname, process.env.WEBPACK_CONTENT_BASE),
+    publicPath: `${process.env.WEBPACK_PUBLIC_PATH}`,
   },
   // Output app js
   output: {
-    path: path.resolve(__dirname, process.env.ASSETS_FOLDER),
+    path: path.resolve(
+      __dirname,
+      `${process.env.PUBLIC_PATH}/${process.env.ASSETS_FOLDER}`
+    ),
     filename: 'js/bundle.js',
   },
   plugins: [
