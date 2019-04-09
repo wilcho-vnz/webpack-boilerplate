@@ -2,6 +2,8 @@
 require('dotenv').config();
 
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -26,7 +28,10 @@ module.exports = {
   },
   // Output app js
   output: {
-    path: path.resolve(__dirname, process.env.ASSETS_FOLDER),
+    path: path.resolve(
+      __dirname,
+      `${process.env.PUBLIC_PATH}/${process.env.ASSETS_FOLDER}`
+    ),
     // To take the name of the index.js change for [name].[chunkhash].js
     filename: 'js/bundle.[chunkhash].js',
   },
@@ -136,10 +141,27 @@ module.exports = {
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(
+      `${process.env.PUBLIC_PATH}/${process.env.ASSETS_FOLDER}`,
+      {}
+    ),
+    new CopyWebpackPlugin([
+      {
+        from: 'src/assets/img',
+        to: path.resolve(
+          __dirname,
+          `${process.env.PUBLIC_PATH}/${process.env.ASSETS_FOLDER}/img`
+        ),
+        ignore: ['.gitignore'],
+      },
+    ]),
     new HtmlWebPackPlugin({
       excludeAssets: [/style.css/, /bundle.js/], // Exclude style and bundle links for generated html files
       template: './src/html/index.html',
-      filename: `${process.env.ASSETS_FOLDER}/index.html`,
+      filename: path.resolve(
+        __dirname,
+        `${process.env.PUBLIC_PATH}/index.html`
+      ),
     }),
     new HtmlWebpackExcludeAssetsPlugin(),
   ],
