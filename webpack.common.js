@@ -141,10 +141,11 @@ module.exports = {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(
-      `${process.env.PUBLIC_PATH}/${process.env.ASSETS_FOLDER}`,
-      {}
-    ),
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: `${process.env.PUBLIC_PATH}/${
+        process.env.ASSETS_FOLDER
+      }`,
+    }),
     new CopyWebpackPlugin([
       {
         from: 'src/assets/img',
