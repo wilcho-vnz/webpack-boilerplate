@@ -2,7 +2,7 @@
 require('dotenv').config();
 
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
@@ -142,9 +142,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: `${process.env.PUBLIC_PATH}/${
-        process.env.ASSETS_FOLDER
-      }`,
+      cleanOnceBeforeBuildPatterns: `${process.env.PUBLIC_PATH}/${process.env.ASSETS_FOLDER}`,
     }),
     new CopyWebpackPlugin([
       {
