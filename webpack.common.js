@@ -107,10 +107,10 @@ module.exports = {
         test: /\.(png|jpg|gif)(\?\S*)?$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
               // If less than 10 kb, add base64 encoded image to css if not reference to file in  assets/img/
-              limit: 10,
+              limit: false,
               // If more than 10 kb move to this folder in build using file-loader
               name: '[name].[ext]',
               // Relative path replaced in css references
