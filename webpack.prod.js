@@ -7,6 +7,7 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
+  // mode: 'production',
   // Output app js
   output: {
     // To take the name of the index.js change for [name].[chunkhash].js
