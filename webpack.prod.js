@@ -1,5 +1,4 @@
 // Plugins
-const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // Hash css files
 const WebpackMd5Hash = require('webpack-md5-hash');

@@ -16,7 +16,7 @@ module.exports = {
     main: './index.js',
   },
   optimization: {
-    minimize: process.env.NODE_ENV === 'production',
+    minimize: process.env.NODE_ENV === 'production' ? true : false,
     minimizer: [
       new UglifyJsPlugin({
         cache: true,
