@@ -11,11 +11,12 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
+  mode: process.env.NODE_ENV,
   entry: {
     main: './index.js',
   },
   optimization: {
-    minimize: process.env.NODE_ENV === 'production',
+    minimize: process.env.NODE_ENV === 'production' ? true : false,
     minimizer: [
       new UglifyJsPlugin({
         cache: true,
@@ -32,8 +33,6 @@ module.exports = {
       __dirname,
       `${process.env.PUBLIC_PATH}/${process.env.ASSETS_FOLDER}`
     ),
-    // To take the name of the index.js change for [name].[chunkhash].js
-    filename: 'js/bundle.[chunkhash].js',
   },
   module: {
     rules: [
@@ -106,10 +105,10 @@ module.exports = {
         test: /\.(png|jpg|gif)(\?\S*)?$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
               // If less than 10 kb, add base64 encoded image to css if not reference to file in  assets/img/
-              limit: 10,
+              limit: false,
               // If more than 10 kb move to this folder in build using file-loader
               name: '[name].[ext]',
               // Relative path replaced in css references

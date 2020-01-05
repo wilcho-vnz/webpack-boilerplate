@@ -1,5 +1,4 @@
 // Plugins
-const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // Hash css files
 const WebpackMd5Hash = require('webpack-md5-hash');
@@ -7,6 +6,7 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
+  // mode: 'production',
   // Output app js
   output: {
     // To take the name of the index.js change for [name].[chunkhash].js

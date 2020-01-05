@@ -52,5 +52,10 @@
   "plugins": [
     "prettier",
     "react"
-  ]
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }
