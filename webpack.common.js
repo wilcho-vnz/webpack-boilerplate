@@ -150,7 +150,7 @@ module.exports = {
           __dirname,
           `${process.env.PUBLIC_PATH}/${process.env.ASSETS_FOLDER}/img`
         ),
-        ignore: ['.gitignore'],
+        ignore: ['.gitignore', '.gitkeep'],
       },
     ]),
     new HtmlWebPackPlugin({
