@@ -33,8 +33,6 @@ module.exports = {
       __dirname,
       `${process.env.PUBLIC_PATH}/${process.env.ASSETS_FOLDER}`
     ),
-    // To take the name of the index.js change for [name].[chunkhash].js
-    filename: 'js/bundle.[chunkhash].js',
   },
   module: {
     rules: [
