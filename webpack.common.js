@@ -37,24 +37,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
-        enforce: 'pre',
-        loader: 'eslint-loader',
-        exclude: /node_modules/,
-        options: {
-          emitWarning: true,
-          configFile: './.eslintrc.json',
-        },
-      },
-      {
-        // Babel
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
-      },
-      {
         test: /\.pug$/,
         use: [
           'html-loader',
