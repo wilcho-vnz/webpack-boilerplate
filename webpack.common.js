@@ -37,7 +37,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.js/,
         enforce: 'pre',
         loader: 'eslint-loader',
         exclude: /node_modules/,
@@ -48,18 +48,11 @@ module.exports = {
       },
       {
         // Babel
-        test: /\.jsx?$/,
+        test: /\.js/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
         },
-      },
-      {
-        test: /\.pug$/,
-        use: [
-          'html-loader',
-          { loader: 'pug-html-loader', options: { pretty: true } },
-        ],
       },
       {
         test: /\.scss$/,

@@ -17,8 +17,6 @@ If you like it send me a tweet!
 - [Babel](https://babeljs.io/)
 - [Bootstrap 4](http://getbootstrap.com/)
 - [Fontawesome 5](https://fontawesome.com/)
-- [Pug](https://pugjs.org/api/getting-started.html)
-- [React](https://reactjs.org/)
 - [Sass](http://sass-lang.com/)
 - [Webpack 4](https://webpack.js.org/)
 
@@ -57,10 +55,6 @@ $ yarn build:prod
 ```
 
 ## How to
-
-### Generating html from pug files
-
-html files from pug files are generated when the command build is used
 
 ### Handle background images
 
