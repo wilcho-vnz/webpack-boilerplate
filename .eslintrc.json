@@ -7,13 +7,10 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:prettier/recommended",
-    "plugin:react/recommended"
+    "plugin:prettier/recommended"
   ],
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
+    "ecmaFeatures": {},
     "ecmaVersion": 2015,
     "sourceType": "module"
   },
@@ -38,8 +35,6 @@
         "trailingComma": "es5"
       }
     ],
-    "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error",
     "semi": [
       "error",
       "always"
@@ -50,12 +45,6 @@
     ]
   },
   "plugins": [
-    "prettier",
-    "react"
-  ],
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  }
+    "prettier"
+  ]
 }
