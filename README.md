@@ -39,7 +39,7 @@ NOTE: run the last command only the first time that you start the devserver. Thi
 ### Start dev server
 
 ```sh
-$ yarn start
+$ yarn dev
 ```
 
 ### Build files
