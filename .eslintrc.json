@@ -1,5 +1,5 @@
 {
-  "extends": "airbnb-base",
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
   "env": {
     "browser": true,
     "es6": true,
@@ -16,6 +16,15 @@
       }
     ],
     "semi": ["error", "never"],
-    "quotes": ["error", "single"]
-  }
+    "quotes": ["error", "single"],
+    "prettier/prettier": [
+      "error",
+      {
+        "arrowParens": "avoid",
+        "semi": false,
+        "singleQuote": true
+      }
+    ]
+  },
+  "plugins": ["prettier"]
 }
