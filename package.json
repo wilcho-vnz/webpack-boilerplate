@@ -1,6 +1,6 @@
 {
   "name": "@wilcho/webpack-boilerplate",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Boilerplate repository for begin to build a basic website from scratch with the latest technologies like Webpack, Babel and Sass.",
   "main": "",
   "scripts": {
@@ -32,9 +32,11 @@
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.2",
     "dotenv": "^8.0.0",
-    "eslint": "^6.8.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.1.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.2",
     "file-loader": "^5.1.0",
     "html-loader": "^0.5.5",
